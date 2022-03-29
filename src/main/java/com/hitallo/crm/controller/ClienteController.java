@@ -21,11 +21,13 @@ public class ClienteController {
 	
 	@GetMapping
 	public List<Cliente> listar(){
+		System.out.println("Entrou");
 		return clienteRepository.findAll();
 	}
 	
 	@PostMapping
 	public Cliente adicionar(@RequestBody Cliente cliente) {
+		System.out.println("Entrou");
 		return clienteRepository.save(cliente);
 	}
 }
